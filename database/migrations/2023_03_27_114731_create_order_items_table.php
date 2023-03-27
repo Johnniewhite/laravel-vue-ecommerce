@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('order_items', function (Blueprint $table) {
             $table->id();
+            $table->ForeignId( column: 'order_id')->references( column: 'id')->on(table: 'orders');
+            $table->ForeignId( column: 'product_id')->references( column: 'id')->on(table: 'products');
+            $table->integer( column: 'quantity');
+            $table->decimal( column: 'unit_price');
             $table->timestamps();
         });
     }
