@@ -1,10 +1,10 @@
 <script setup>
+
 </script>
 
 <template>
-<RouterView></RouterView>
+  <router-view></router-view>
 </template>
 
 <style>
-
 </style>
